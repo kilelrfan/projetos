@@ -2,18 +2,12 @@ from random import randint
 import time
 import os
 from jogo import funções
-from jogo import personagens
 
 def tempo():
     time.sleep(2)
 
 
-
 inimigos = {1 : {"hp" : 500, "ataque" : 50}, 2 : {"hp" : 400, "ataque" : 70}, 3 : {"hp" : 700, "ataque" : 30}}
-
-
-
-
 
 #       Menu do jogo
 
@@ -31,8 +25,6 @@ else:
 while escolha == 1:
     nome = input("Qual o seu nome? ")
 
-    personagem = personagens.assassino(nome)
-
     status_do_personagem = {
     "ouro" : 0,
     "hp" : 500,
@@ -45,7 +37,6 @@ while escolha == 1:
     "xp_precisa" : 300
     }
 
-    personagens.arqueiro(nome)
     print("\n"*10)
     print("Tudo ok!".center(90))
     funções.enter()
